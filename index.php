@@ -130,7 +130,11 @@ foreach ($services_web as &$service) {
         <div class="container">
             <h1>Shalom Digital Solutions- Votre partenaire en solutions numériques innovantes</h1>
             <p>Nous accompagnons les organisations, entrepreneurs, ONG et projets dans la <b>création de sites web performants</b>, la <b>gestion et l’analyse de données</b>, ainsi que <b>la collecte de données digitales</b> grâce à des outils modernes.</p>
-            <a href="#services" class="btn">Découvrir tous nos services</a>
+            <a href="#services" class="btn">Découvrir tous nos services</a><br>
+            <form method="GET" action="./admin/services.php">
+            <input type="text" name="q" placeholder="Rechercher un service">
+            <button>Rechercher</button>
+            </form>
         </div>
     </section>
 
@@ -144,13 +148,13 @@ foreach ($services_web as &$service) {
                     <p>Notre expertise s’articule autour de <strong>trois domaines clés</strong> : 
                         <ul>
                             <li>
-                                la<strong> création de sites web modernes et performants</strong>,
+                                <strong> création de sites web modernes et performants</strong>,
                             </li>
                             <li>
-                                la <strong>gestion, l'analyse et la valorisation des données</strong> à l'aide d'outils numériques avancés,
+                                <strong>gestion, l'analyse et la valorisation des données</strong> à l'aide d'outils numériques avancés,
                             </li>
                             <li>
-                                la <strong>mise en place de systèmes fiable de collecte de données</strong> pour le suivi, l'évaluation et la prise de décision.
+                                <strong>mise en place de systèmes fiable de collecte de données</strong> pour le suivi, l'évaluation et la prise de décision.
                             </li>
                         </ul>
                     </p>

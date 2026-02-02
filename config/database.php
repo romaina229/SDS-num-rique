@@ -1,10 +1,10 @@
 <?php
 // config/database.php
 class Database {
-    private $host = "localhost";
-    private $db_name = "lifero_pro";
-    private $username = "root";
-    private $password = "";
+    private $host = "sql202.infinityfree.com";
+    private $db_name = "if0_40950975_sds";
+    private $username = "if0_40950975";
+    private $password = "Shalom20262001";
     public $conn;
 
     public function getConnection() {

@@ -40,7 +40,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'liferopro@gmail.com';
-    $mail->Password   = 'MOT_DE_PASSE_APPLICATION'; // IMPORTANT
+    $mail->Password   = 'Lifero@2026.'; // IMPORTANT
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 

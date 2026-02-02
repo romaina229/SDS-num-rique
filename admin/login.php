@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 require_once '../includes/functions.php';
         
         // Rechercher l'utilisateur
-        $db = new PDO('mysql:host=localhost;dbname=lifero_pro', 'root','');
+        $db = new PDO('mysql:host=sql202.infinityfree.com;dbname=if0_40950975_sds', 'if0_40950975','Shalom20262001');
         $sql = "SELECT * FROM admins WHERE username = :username AND active = 1";
         $stmt = $db->prepare($sql);
         $stmt->execute([':username' => $username]);

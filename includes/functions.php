@@ -15,9 +15,9 @@ function getDBConnection() {
     if ($db === null) {
         try {
             $db = new PDO(
-                "mysql:host=localhost;dbname=lifero_pro;charset=utf8mb4",
-                "root",
-                "",
+                "mysql:host=sql202.infinityfree.com;dbname=if0_40950975_sds;charset=utf8mb4",
+                "if0_40950975",
+                "Shalom20262001",
                 [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
