@@ -1,0 +1,611 @@
+/* Styles généraux commande */
+/* assets/css/commande.css */
+.order-section {
+    min-height: 80vh;
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.order-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.order-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.order-steps:before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #eee;
+    z-index: 1;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    color: var(--gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 10px;
+    transition: all 0.3s;
+    border: 3px solid white;
+}
+
+.step.active .step-circle {
+    background-color: var(--secondary);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+.step.completed .step-circle {
+    background-color: var(--success);
+    color: white;
+}
+
+.step.completed .step-circle:after {
+    content: '✓';
+    font-weight: bold;
+}
+
+.order-form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.form-page {
+    padding: 40px;
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.form-page.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.form-group label .required {
+    color: var(--accent);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-control.error {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.error-message {
+    color: var(--danger);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Sélection des services */
+.service-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-option {
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    background-color: white;
+}
+
+.service-option:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-option.selected {
+    border-color: var(--secondary);
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.service-option.selected:before {
+    content: '✓';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.service-option h4 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.service-option .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+.service-option .price span {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: normal;
+}
+
+.service-option .duration {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* Méthodes de paiement */
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.payment-option {
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.payment-option:hover {
+    border-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.payment-option.selected {
+    border-color: var(--secondary);
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.payment-option.selected:before {
+    content: '✓';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.payment-option i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.payment-option h4 {
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.payment-option p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Récapitulatif de commande */
+.order-summary {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    border: 1px solid #eee;
+}
+
+.order-summary h4 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.summary-total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--secondary);
+}
+
+/* Formulaire de carte bancaire */
+.card-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    border: 1px solid #eee;
+    display: none;
+}
+
+.card-form.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+.card-form h4 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.card-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card-icons i {
+    font-size: 2rem;
+    color: #ddd;
+}
+
+.card-icons i.fa-cc-visa { color: #1a1f71; }
+.card-icons i.fa-cc-mastercard { color: #eb001b; }
+.card-icons i.fa-cc-amex { color: #2e77bc; }
+
+/* Navigation du formulaire */
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Confirmation */
+.confirmation-message {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.confirmation-icon {
+    font-size: 5rem;
+    color: var(--success);
+    margin-bottom: 30px;
+    animation: scaleIn 0.5s;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.confirmation-message h2 {
+    color: var(--success);
+    margin-bottom: 20px;
+}
+
+.confirmation-message p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.order-details {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.order-details h4 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+}
+
+/* Loader */
+.loader {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+}
+
+/* Responsive pour la page de commande */
+@media (max-width: 768px) {
+    .order-steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .order-steps:before {
+        display: none;
+    }
+    
+    .form-page {
+        padding: 25px;
+    }
+    
+    .service-options,
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-navigation button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .order-section {
+        padding: 80px 0;
+    }
+    
+    .confirmation-message {
+        padding: 40px 20px;
+    }
+    
+    .confirmation-icon {
+        font-size: 4rem;
+    }
+}
+
+/* Animation de progression */
+.progress-bar {
+    height: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Badge pour service populaire */
+.service-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Informations supplémentaires */
+.additional-info {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--secondary);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.additional-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Champs conditionnels */
+.conditional-field {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.conditional-field.active {
+    display: block;
+}
+
+/* Validation en temps réel */
+.valid-field .form-control {
+    border-color: var(--success);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+}
+
+.invalid-field .form-control {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.validation-icon {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.valid-field .validation-icon.fa-check {
+    display: block;
+    color: var(--success);
+}
+
+.invalid-field .validation-icon.fa-times {
+    display: block;
+    color: var(--danger);
+}
+
+.form-group {
+    position: relative;
+}
+
+/* Aide contextuelle */
+.help-text {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 5px;
+    display: block;
+}
+
+/* Modal pour conditions */
+.terms-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.terms-modal.active {
+    display: flex;
+}
+
+.terms-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.terms-content h3 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.terms-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--gray);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+}
