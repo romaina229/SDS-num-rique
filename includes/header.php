@@ -90,8 +90,12 @@ $current_page = isset($current_page) ? $current_page : basename($_SERVER['PHP_SE
     <header>
         <div class="container header-container">
             <a href="index.php" class="logo">
-            <img src="../assets/images/Logosds.png" alt="logo site" style="width: 70px; height: 70px; margin-right: 10px; vertical-align: middle;">
-                Shalom Digital <span>Solutions</span>
+                <div class="header-logo-container">
+                    <img src="assets/images/Logosds.png" alt="Shalom Digital Solutions" class="site-logo">
+                    <div class="site-title">
+                        SD<span>Solutions</span>
+                    </div>
+                </div>
             </a>
             
             <button class="mobile-menu-btn">

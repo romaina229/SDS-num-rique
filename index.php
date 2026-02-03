@@ -102,8 +102,12 @@ foreach ($services_web as &$service) {
     <header>
         <div class="container header-container">
             <a href="index.php" class="logo">
-            <img src="assets/images/Logosds.png" alt="logo site" style="width: 70px; height: 70px; margin-right: 10px; vertical-align: middle;">
-                Shalom Digital <span>Solutions</span>
+                <div class="header-logo-container">
+                    <img src="assets/images/Logosds.png" alt="Shalom Digital Solutions" class="site-logo">
+                    <div class="site-title">
+                        SD<span>Solutions</span>
+                    </div>
+                </div>
             </a>
             
             <button class="mobile-menu-btn">
@@ -131,10 +135,6 @@ foreach ($services_web as &$service) {
             <h1>Shalom Digital Solutions- Votre partenaire en solutions numériques innovantes</h1>
             <p>Nous accompagnons les organisations, entrepreneurs, ONG et projets dans la <b>création de sites web performants</b>, la <b>gestion et l’analyse de données</b>, ainsi que <b>la collecte de données digitales</b> grâce à des outils modernes.</p>
             <a href="#services" class="btn">Découvrir tous nos services</a><br>
-            <form method="GET" action="./admin/services.php">
-            <input type="text" name="q" placeholder="Rechercher un service">
-            <button>Rechercher</button>
-            </form>
         </div>
     </section>
 

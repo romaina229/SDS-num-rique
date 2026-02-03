@@ -199,9 +199,43 @@ header.scrolled {
     color: var(--secondary);
 }
 
-.logo i {
+/*.logo i {
     margin-right: 10px;
     color: var(--secondary);
+}*/
+
+/*Header logo et titre*/
+/* Logo et titre alignés */
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-logo {
+    height: 60px;
+    width: auto;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+.site-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.site-title span {
+    color: var(--secondary);
+}
+
+/* Modifier le .logo existant */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* Navigation */

@@ -36,8 +36,12 @@ $categories = $stmt_cat->fetchAll(PDO::FETCH_COLUMN);
     <header>
         <div class="container header-container">
             <a href="index.php" class="logo">
-                <img src="assets/images/Logosds.png" alt="logo site" style="width: 50px; height: 50px; margin-right: 10px; vertical-align: middle;">
-                Shalom Digital <span>Solutions</span>
+                <div class="header-logo-container">
+                    <img src="assets/images/Logosds.png" alt="Shalom Digital Solutions" class="site-logo">
+                    <div class="site-title">
+                        SD<span>Solutions</span>
+                    </div>
+                </div>
             </a>
             
             <button class="mobile-menu-btn">
@@ -194,6 +198,7 @@ $categories = $stmt_cat->fetchAll(PDO::FETCH_COLUMN);
                 this.style.transform = 'translateY(0)';
             });
         });
+                <?php include 'assets/js/script.js'; ?>
     </script>
 </body>
 </html>

@@ -511,9 +511,13 @@ if(!$article && $article_id > 0) {
     <!-- Header simplifié -->
     <header>
         <div class="container header-container">
-            <a href="../index.php" class="logo">
-             <img src="assets/images/Logosds.png" alt="logo site" style="width: 50px; height: 50px; margin-right: 10px; vertical-align: middle;">
-                Shalom Digital <span>Solutions</span>
+            <a href="index.php" class="logo">
+                <div class="header-logo-container">
+                    <img src="assets/images/Logosds.png" alt="Shalom Digital Solutions" class="site-logo">
+                    <div class="site-title">
+                        SD<span>Solutions</span>
+                    </div>
+                </div>
             </a>
             
             <nav>
@@ -980,6 +984,7 @@ if(!$article && $article_id > 0) {
                 e.returnValue = 'Vous avez des modifications non sauvegardées. Êtes-vous sûr de vouloir quitter ?';
             }
         });
+                <?php include 'assets/js/script.js'; ?>
     </script>
 </body>
 </html>

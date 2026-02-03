@@ -156,8 +156,12 @@ $sujets = [
     <header>
         <div class="container header-container">
             <a href="index.php" class="logo">
-                <img src="assets/images/Logosds.png" alt="logo site" style="width: 50px; height: 50px; margin-right: 10px; vertical-align: middle;">
-                Shalom Digital <span>Solutions</span>
+                <div class="header-logo-container">
+                    <img src="assets/images/Logosds.png" alt="Shalom Digital Solutions" class="site-logo">
+                    <div class="site-title">
+                        SD<span>Solutions</span>
+                    </div>
+                </div>
             </a>
             
             <button class="mobile-menu-btn">
@@ -595,6 +599,7 @@ $sujets = [
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
+                <?php include 'assets/js/script.js'; ?>
     </script>
 </body>
 </html>

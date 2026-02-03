@@ -229,8 +229,8 @@ exit;
                     <div class="company-info">
                         <h1>Shalom DigitalSolutions</h1>
                         <p>Services Digitaux & Formation</p>
-                        <p>Email: contact@shalomvie-pro.com</p>
-                        <p>Téléphone: +225 XX XX XX XX</p>
+                        <p>Email: liferopro@gmail.com</p>
+                        <p>Téléphone: +229 01 69 5 17 66</p>
                     </div>
                     
                     <div class="invoice-info">
@@ -428,6 +428,7 @@ exit;
     function printInvoice() {
         window.print();
     }
+            <?php include 'assets/js/script.js'; ?>
     </script>
 </body>
 </html>

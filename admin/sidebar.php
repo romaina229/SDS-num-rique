@@ -5,10 +5,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <!-- SIDEBAR DESKTOP -->
 <aside class="desktop-sidebar" id="desktop-sidebar">
     <div class="desktop-sidebar-header">
-        <a href="../index.php" class="desktop-logo" target="_blank">
-            <img src="../assets/images/Faviconsds.png" alt="logo site" style="width: 50px; height: 50px; margin-right: 10px; vertical-align: middle;">
-            Shalom Digital <span>Solutions</span>
-        </a>
         <p class="desktop-admin-welcome">
             <i class="fas fa-user-circle"></i>
             <?php echo htmlspecialchars($_SESSION['admin_username'] ?? 'Admin'); ?>
